@@ -1,3 +1,603 @@
-html {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Mr+De+Haviland&display=swap');
+
+/* Base Styling */
+*{
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+h1, h2, p {
+  margin: 1.6rem 0;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 3.6rem;
+}
+
+h2 {
+  font-weight: 800;
+  font-size: 2.4rem;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  align-items: center;
+  margin: auto;
+}
+
+section {
+  padding: 100px 0;
+}
+
+/* Nav Section */
+
+header {
+  width: 100%;
+  height: 75px;
+}
+
+.logo h1{
+  font-size: 3.2rem;
+  color: #354347;
+  margin: 0;
+  font-weight: lighter;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+nav {
+  height: 75px;
+  width: 100%;
+  padding: 1% 5%;
+  display: flex;
+  justify-content: space-between;
+  background-color: whitesmoke;
+  position: fixed;
+}
+
+nav box-icon {
+  display: none;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 2.5rem;
+  line-height: 55px;
+}
+
+nav ul li a {
+  color: #354347;
+  font-size: 1.8rem;
+}
+
+nav ul li a:hover {
+  font-size: 2rem;
+  transition: font-size .3s ease-out;
+}
+
+/* Hero Section */
+.hero {
+  width: 100%;
+  padding: 150px 120px;
+}
+
+.hero,
+.hero-background {
+  text-align: center;
+  background-color: #354347;
+}
+
+.hero-background h1 {
+  font-size: 10rem;
+  font-family: "Mr De Haviland", serif;
+  font-weight: 90;
+  color: #F1F1F1;
+}
+
+.hero-background p {
+  padding: 0 20%;
+  color: #F1F1F1;
+  font-size: 2.5rem;
+}
+
+.hero-background h2 {
+  font-size: 1.9rem;
+  color: #F1F1F1;
+  font-weight: lighter;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+/* may need later */
+
+form {
+  margin: 2.4rem 0;
+}
+
+input {
+  font-size: 1.8rem;
+}
+
+input[type=text],
+input[type=email] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 1.2rem 0;
+  display: block;
+  border: 1px solid #87836B
+}
+
+input[type=submit] {
+  width: 50%;
+  background-color: #ECEADD;
+  color: #354347;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+input[type=submit]:hover {
+  background-color: #D6AA87;
+  color: #FFF;
+  transition: .5s ease-in-out;
+}
+
+input::placeholder {
+  font-size: 1.3rem;
+  color: #CCC;
+}
+
+/* About Section */
+
+.about {
+  /* background-color: #E8DED5; */
+  background-color: #F5F4EF;
+}
+.about h1 {
+  text-align: center;
+  /* color: #354347; */
+  color: #A0652D;
+  margin-bottom: 2.5rem;
+}
+
+.row,
+.about-left,
+.about-middle,
+.about-right {
+  align-items: flex-start;
+}
+
+.about-left,
+.about-middle,
+.about-right {
+  flex-basis: 30%;
+  padding: 0 2rem;
+  height: 41rem;
+  width: 100%;
+  border: 2px solid #354347;
+  /* background-color: #D3E3D3; */
+}
+
+.about h2 {
+  /* color: #354347; */
+  color: #A0652D;
+}
+
+.about li {
+  margin-left: 2rem;
+  font-size: 1.5rem;
+}
+
+.btn {
+  background-color: #354347;
+  color: white;
+  padding: 8px 16px;
+  display: inline-block;
+  margin: 2rem 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background-color: #A0652D;
+  transition: .5s ease-in-out;
+}
+
+
+
+
+/* About 2 Section */
+
+
+.about2 {
+  background-color: #354347;
+  color: white;
+}
+
+.about2-left {
+  flex-basis: 50%;
+}
+
+.about2-right {
+  flex-basis: 30%;
+}
+
+.about2 .card {
+  height: 30rem;
+  width: 30rem;
+  padding: 1rem;
+  color: white;
+  margin: 1.6rem;
+  text-align: center;
+}
+
+.yoy {
+  border-radius: 50%;
+}
+
+.about2 h3 {
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.about2 h2 {
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+/* Process Section */
+
+.process h1 {
+  color: #87836B;
+}
+
+.process .row {
+  justify-content: center;
+}
+
+.process-content {
+  margin: 50px;
+}
+
+.progress-bar {
+  width: 80%;
+  height: 2px;
+  background-color: #222;
+  margin: auto;
+  position: relative;
+  z-index: -50;
+}
+
+.progress-bar .c1,
+.progress-bar .c2,
+.progress-bar .c3 {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #222;
+  position: absolute;
+}
+
+.progress-bar .c1 {
+  top: -8px;
+  left: 50px;
+}
+
+.progress-bar .c2 {
+  top: -8px;
+  left: 50%;
+}
+
+.progress-bar .c3 {
+  top: -8px;
+  right: 50px;
+}
+
+.box1,
+.box2,
+.box3 {
+  padding: 1.8rem;
+}
+
+.process .box2 {
+  text-align: center;
+}
+
+.process .box3 {
+  text-align: right;
+}
+
+.process-content h2 {
+  color: #87836B;
+}
+
+/* Testimony */
+
+.testimony {
+  background-color: #F5F4EF;
+  color: white;
+}
+
+.testimony h2 {
+  font-weight: 400;
+}
+
+.testimony .test {
+  background-color: #354347;
+  padding: 4rem 8rem;
+  margin: 0 1rem;
+}
+
+.testimony .image {
+  height: 80px;
+  width: 80px;
+}
+
+.testimony img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* FAQ Section*/
+
+.faq {
+  background-color: #ECEADD;
+  color: #354347;
+}
+
+.faq h1 {
+  color: #A0652D;
+}
+
+.faq h2 {
+  color: #A0652D;
+}
+
+
+/* Contact Section */
+
+.contact {
+  background-color: #354347;
+}
+.contact h1 {
+  color: #FFF;
+}
+
+.contact .row {
+  justify-content: center;
+}
+
+.contact form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact form input {
+  width: 50%;
+}
+
+.contact textarea {
+  width: 50%;
+  height: 150px;
+  padding: 12px 20px;
+  border: 1px solid #87836B;
+  font-size: 1.3rem;
+  resize: none;
+  color: #CCC;
+  margin: 1.2rem 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Footer */
+
+footer {
+  height: 80px;
+  background-color: #222;
+  color: white;
+  line-height: 80px;
+  text-align: center;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width:1400px){
+
+.row {
+  width: 90%;
+}
+
+section {
+  padding: 50px 0;
+}
+
+.hero {
+  padding: 50px;
+}
+
+.process-content {
+  margin: 25px;
+}
+
+.about2 .card {
+  height: 30rem;
+  width: 25rem;
+}
+
+.about2-right h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.about2-right h2 {
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width:1100px){
+  .about .row {
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .about-left,
+  .about-middle,
+  .about-right {
+    margin: 1rem 0;
+    padding-bottom: 1rem;
+  }
+
+  .about2-right .card{
+    height: 25rem;
+    width: 20rem;
+  }
+
+  .about2 .row {
+    margin: auto;
+  }
+
+  .testimony .test {
+    padding: 3rem 5rem;
+  }
+}
+
+
+
+@media only screen and (max-width:992px){
+  nav {
+    flex-direction: column;
+    position: relative;
+  }
+
+  nav box-icon {
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 32px;
+  }
+
+  nav ul {
+    background-color: white;
+    display: none;
+  }
+
+  .showmenu {
+    display: block;
+  }
+
+  nav ul li {
+    display: block;
+    padding: 2% 0;
+  }
+
+  nav ul li a {
+    color: black;
+  }
+
+  .about2 .row {
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+  }
+
+  .about2-right {
+    display: flex;
+  }
+
+  .about2-right .row {
+    margin: auto;
+  }
+
+  .progress-bar {
+    display: none;
+  }
+
+  .process-content .row {
+    flex-direction: column;
+  }
+
+  .process-content h2 {
+    text-align: left;
+  }
+
+  .process-content p {
+    text-align: left;
+  }
+
+  .testimony .row {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width:768px){
+
+  nav, header {
+    height: 60px;
+  }
+  .logo h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p{
+  padding: 0%;
+  }
+
+  input[type=text],
+  input[type=email] {
+    width: 80% !important;
+  }
+
+  input[type=submit] {
+    width: 80% !important;
+  }
+
+  .contact textarea {
+    width: 80% !important;
+  }
+}
+
+@media only screen and (max-width:576px){
+  .process-content {
+    margin: 0%;
+  }
 }
