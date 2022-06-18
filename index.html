@@ -5,24 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/styles.css">
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <title>Cuppett Psychology</title>
+    <title>Cuppett Psychology | Home</title>
   </head>
 
   <body>
     <header>
       <nav>
         <div class="logo">
-          <h1>Cuppett Psychology</h1>
+          <a href="#"><h1>Cuppett Psychology</h1></a>
         </div>
-        <ul>
-          <li><a href="">Services</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">FAQ</a></li>
-          <li><a href="">Contact</a></li>
+        <div class="mobile-logo">
+          <h1>Cuppett
+            <br>Psychology</h1>
+        </div>
+        <ul class="menu">
+          <li><a class="menuItem" href="#services">Services</a></li>
+          <li><a class="menuItem" href="#about-us">About</a></li>
+          <li><a class="menuItem" href="#process">Process</a></li>
+          <li><a class="menuItem" href="#faq">FAQ</a></li>
+          <li><a class="menuItem" href="#contact">Contact</a></li>
         </ul>
-        <box-icon name='menu' color="white" size="lg" id="menu" ></box-icon>
+        <button class="hamburger">
+          <i class="menuIcon material-icons">menu</i>
+          <i class="closeIcon material-icons">close</i>
+        </button>
       </nav>
     </header>
 
@@ -35,8 +43,8 @@
       </div>
     </section>
 
-    <!-- About -->
-    <section class="about">
+    <!-- About (Services) -->
+    <section class="about" id="services">
       <h1>Our Services</h1>
       <div class="row">
         <div class="about-left">
@@ -69,7 +77,7 @@
     </section>
 
     <!-- About 2 -->
-    <section class="about2">
+    <section class="about2" id="about-us">
       <div class="row">
         <div class="about2-left">
           <h2>EQUIPPED TO SERVE YOU</h2>
@@ -79,36 +87,32 @@
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat natus repudiandae culpa officiis nam. Consequuntur explicabo repudiandae provident natus necessitatibus odio, magni esse excepturi eum quae, quibusdam debitis perspiciatis numquam?</p>
         </div>
         <div class="about2-right">
-          <div class="row">
-            <div class="card">
-              <img class='yoy' src="./images/paul-funny.jpeg" alt="">
-              <h2>Dr. Paul Cuppett</h2>
-              <h3>Psy, D</h3>
-            </div>
-            <div class="card">
-              <img class='yoy' src="./images/Head Shot - Square.jpg" alt="">
-              <h2>Molly</h2>
-              <h3>Title</h3>
-            </div>
+          <div class="card">
+            <img class='headshots' src="./images/paul-funny.jpeg" alt="">
+            <h2>Dr. Paul Cuppett</h2>
+            <h3>Psy, D</h3>
           </div>
-          <div class="row">
-            <div class="card">
-              <img class='yoy' src="./images/Head Shot - Square.jpg" alt="">
-              <h2>Brittni </h2>
-              <h3>Title</h3>
-            </div>
-            <div class="card">
-              <img class='yoy' src="./images/amy-funny.jpeg" alt="">
-              <h2>Amy Cuppett</h2>
-              <h3>Administrative Assistant</h3>
-            </div>
+          <div class="card">
+            <img class='headshots' src="./images/Head Shot - Square.jpg" alt="">
+            <h2>Molly</h2>
+            <h3>Title</h3>
+          </div>
+          <div class="card">
+            <img class='headshots' src="./images/Head Shot - Square.jpg" alt="">
+            <h2>Brittni </h2>
+            <h3>Title</h3>
+          </div>
+          <div class="card">
+            <img class='headshots' src="./images/amy-funny.jpeg" alt="">
+            <h2>Amy Cuppett</h2>
+            <h3>Administrative Assistant</h3>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Process -->
-    <section class="process">
+    <section class="process" id="process">
       <div class="row">
         <h1>What is our process?</h1>
       </div>
@@ -170,7 +174,7 @@
 
     <!-- FAQ -->
 
-    <section class="faq">
+    <section class="faq" id="faq">
       <div class="row">
         <div class="faq-content">
           <h1>Frequently Asked Questions</h1>
@@ -186,7 +190,7 @@
 
     <!-- Contact -->
 
-    <section class="contact">
+    <section class="contact" id="contact">
       <div class="row">
         <h1>Contact Us</h1>
       </div>
@@ -202,9 +206,12 @@
 
     <!-- Footer -->
     <footer>
-      <p>Copyright 2022 Matt Bowen</p>
+      <p>Copyright 2022 Cuppett Psychology
+        <br>Designed and Developed by <a href="https://github.com/mattbowen03" target="_blank">Matt Bowen</a>
+      </p>
     </footer>
-    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+
+    
     <script src="./scripts/app.js"></script>
   </body>
 </html>

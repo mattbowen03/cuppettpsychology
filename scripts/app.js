@@ -1,6 +1,34 @@
+const menu = document.querySelector(".menu");
+const menuItems = document.querySelectorAll(".menuItem");
+const hamburger= document.querySelector(".hamburger");
+const closeIcon= document.querySelector(".closeIcon");
+const menuIcon = document.querySelector(".menuIcon");
+
+function toggleMenu() {
+  console.log('Hamburger clicked, toggleMenu function run');
+
+  if (menu.classList.contains("showMenu")) {
+    console.log('menu.classList.contains showMenu');
+    menu.classList.remove("showMenu");
+    closeIcon.style.display = "none";
+    menuIcon.style.display = "block";
+  } else {
+    menu.classList.add("showMenu");
+    closeIcon.style.display = "block";
+    menuIcon.style.display = "none";
+  }
+}
+
+hamburger.addEventListener("click", toggleMenu);
 
 
-document.querySelector('#menu').addEventListener('click',()=>{
-  document.querySelector('nav ul').classList.toggle('showmenu');
-})
+menuItems.forEach( 
+  function(menuItem) { 
+    menuItem.addEventListener("click", toggleMenu);
+  }
+)
+
+const startClosed = () => closeIcon.style.display = "none";
+
+startClosed();
 

@@ -8,6 +8,7 @@
   padding: 0;
   box-sizing: border-box;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -64,6 +65,17 @@ header {
 }
 
 .logo h1{
+  display: block;
+  font-size: 3.2rem;
+  color: #354347;
+  margin: 0;
+  font-weight: lighter;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.mobile-logo h1{
+  display: none;
   font-size: 3.2rem;
   color: #354347;
   margin: 0;
@@ -80,10 +92,6 @@ nav {
   justify-content: space-between;
   background-color: whitesmoke;
   position: fixed;
-}
-
-nav box-icon {
-  display: none;
 }
 
 nav ul {
@@ -104,6 +112,15 @@ nav ul li a {
 nav ul li a:hover {
   font-size: 2rem;
   transition: font-size .3s ease-out;
+}
+
+.hamburger {
+  display: none;
+}
+
+.closeIcon {
+  display: none;
+  background-color: blue;
 }
 
 /* Hero Section */
@@ -243,31 +260,38 @@ input::placeholder {
 
 /* About 2 Section */
 
-
 .about2 {
   background-color: #354347;
   color: white;
 }
 
+.about2 h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
 .about2-left {
-  flex-basis: 50%;
+  flex-basis: 60%;
 }
 
 .about2-right {
-  flex-basis: 30%;
+  flex-basis: 40%;
+  text-align: center;
+  padding-top: 4rem;
 }
 
-.about2 .card {
-  height: 30rem;
-  width: 30rem;
-  padding: 1rem;
+.about2-right .card {
+  height: 22rem;
+  width: 22rem;
   color: white;
-  margin: 1.6rem;
+  display: inline-block;
   text-align: center;
 }
 
-.yoy {
+.headshots {
   border-radius: 50%;
+  height: 15rem;
+  width: auto;
 }
 
 .about2 h3 {
@@ -427,14 +451,29 @@ input::placeholder {
   font-family: "Poppins", sans-serif;
 }
 
+
 /* Footer */
 
 footer {
   height: 80px;
   background-color: #222;
   color: white;
-  line-height: 80px;
   text-align: center;
+  padding: 1rem;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: #A0652D;
+  transition: .5s ease-in-out;
 }
 
 /* Media Queries */
@@ -457,9 +496,13 @@ section {
   margin: 25px;
 }
 
-.about2 .card {
-  height: 30rem;
-  width: 25rem;
+.about2-right .card {
+  height: 20rem;
+  width: 20rem;
+}
+
+.headshots {
+  height: 12rem;
 }
 
 .about2-right h3 {
@@ -474,7 +517,10 @@ section {
   }
 }
 
-@media only screen and (max-width:1100px){
+@media only screen and (max-width:1120px){
+  nav {
+    padding: 1% 2%;
+  }
   .about .row {
     flex-direction: column;
     margin: auto;
@@ -486,14 +532,17 @@ section {
     margin: 1rem 0;
     padding-bottom: 1rem;
   }
+  
+  .about2-right {
+    width: 100%;
+  }
 
-  .about2-right .card{
-    height: 25rem;
-    width: 20rem;
+  .headshots {
+    height: 12rem;
   }
 
   .about2 .row {
-    margin: auto;
+    flex-direction: column;
   }
 
   .testimony .test {
@@ -509,20 +558,8 @@ section {
     position: relative;
   }
 
-  nav box-icon {
-    display: block;
-    position: absolute;
-    top: 18px;
-    right: 32px;
-  }
-
   nav ul {
     background-color: white;
-    display: none;
-  }
-
-  .showmenu {
-    display: block;
   }
 
   nav ul li {
@@ -534,18 +571,54 @@ section {
     color: black;
   }
 
-  .about2 .row {
-    flex-direction: column;
-    margin: auto;
-    align-items: center;
+ /* Hamburger Nav*/
+  .hamburger {
+    display: inline-block;
+    position: fixed;
+    z-index: 100;
+    top: 1rem;
+    right: 1rem;
+    padding: 4px;
+    border: black solid 1px;
+    background: white;
+    cursor: pointer;
   }
 
-  .about2-right {
-    display: flex;
+  .closeIcon {
+    display: none;
+    background-color: white;
   }
 
-  .about2-right .row {
-    margin: auto;
+  .menu {
+    position: fixed;
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+    top: 0;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: rgba(160, 101, 45, .95);
+    list-style: none;
+    padding-top: 4rem;
+
+  }
+
+  .menu li a{
+    color: #354347;
+  }
+
+  .menu li a:active {
+    color: white;
+  }
+
+  .menu li {
+    text-align: right;
+    padding: 0 2rem 0 0;
+  }
+  
+  .showMenu {
+    transform: translateY(0);
   }
 
   .progress-bar {
@@ -597,7 +670,61 @@ section {
 }
 
 @media only screen and (max-width:576px){
+  
+  .logo h1{
+    display: none;
+  }
+
+  .mobile-logo h1{
+    display: block;
+    font-size: 1.8rem;
+  }
+
+  .hero-background h1 {
+    font-size: 7rem;
+  }
+  
+  .hero-background p {
+    padding: 0 10%;
+    color: #F1F1F1;
+    font-size: 1.9rem;
+  }
+  
+  .hero-background h2 {
+    font-size: 1.5rem;
+    color: #F1F1F1;
+    font-weight: lighter;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+  }
+  
+  .process {
+    padding: 0;
+  }
+
   .process-content {
-    margin: 0%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .process .process-content .row {
+    margin: 0;
+    width: 100%;
+  }
+
+  .box1,
+  .box2,
+  .box3 {
+    padding: 0;
+  }
+
+  .testimony .test {
+    padding: 1rem 2rem;
+  }
+}
+
+@media only screen and (max-width:470px){
+  .card .headshots {
+    height: 10rem;
   }
 }
