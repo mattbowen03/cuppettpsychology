@@ -31,4 +31,3 @@ menuItems.forEach(
 const startClosed = () => closeIcon.style.display = "none";
 
 startClosed();
-
