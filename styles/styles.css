@@ -59,9 +59,9 @@ section {
 
 /* Nav Section */
 
-.dropdown {
-  /* overflow: hidden; */
-}
+/* .dropdown {
+  overflow: hidden;
+} */
 
 .dropdown-content {
   display: none;
