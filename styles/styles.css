@@ -302,50 +302,46 @@ input::placeholder {
 
 
 
-/* About 2 Section */
+/* About 2 Section (About Us)*/
 
 .about2 {
   background-color: #354347;
   color: white;
 }
 
+.about2 h1 {
+  text-align: center;
+  margin-top: 0;
+}
+
 .about2 h2 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-weight: 600;
 }
 
-.about2-left {
-  flex-basis: 60%;
+.staff-card {
+  margin: 3rem auto;
 }
 
-.about2-right {
-  flex-basis: 40%;
-  text-align: center;
-  padding-top: 4rem;
+.headshot-container {
+  margin: 1rem 1rem 1rem 0;
 }
 
-.about2-right .card {
-  height: 22rem;
-  width: 22rem;
-  color: white;
-  display: inline-block;
-  text-align: center;
+.bio-container {
+  margin-left: 1rem;
 }
 
 .headshots {
   border-radius: 50%;
-  height: 15rem;
+  height: 20rem;
   width: auto;
 }
 
 .about2 h3 {
-  font-size: 1.7rem;
-  font-weight: 400;
-}
-
-.about2 h2 {
-  font-weight: 500;
-  margin-bottom: 0;
+  font-size: 2rem;
+  font-weight: 200;
+  letter-spacing: 2px;
 }
 
 /* Process Section */
@@ -572,9 +568,6 @@ section {
   width: 20rem;
 }
 
-.headshots {
-  height: 12rem;
-}
 
 .about2-right h3 {
   font-size: 1.5rem;
@@ -603,18 +596,11 @@ section {
     margin: 1rem 0;
     padding-bottom: 1rem;
   }
-  
-  .about2-right {
-    width: 100%;
-  }
 
   .headshots {
-    height: 12rem;
+    height: 15rem;
   }
 
-  .about2 .row {
-    flex-direction: column;
-  }
 
   .testimony .test {
     padding: 3rem 5rem;
@@ -750,6 +736,10 @@ section {
   padding: 0%;
   }
 
+  .about2 .row {
+    flex-direction: column;
+  }
+
   input[type=text],
   input[type=email] {
     width: 80% !important;
@@ -791,6 +781,10 @@ section {
     font-weight: lighter;
     letter-spacing: 8px;
     text-transform: uppercase;
+  }
+
+  .headshot-container {
+    margin: 0 auto 1rem auto;
   }
   
   .process {
