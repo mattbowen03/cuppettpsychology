@@ -6,39 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
     <title>Cuppett Psychology | Home</title>
   </head>
 
+<!-- https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp -->
+
   <body>
     <header>
       <nav>
-        <div class="logo">
-          <a href="#"><h1>Cuppett Psychology</h1></a>
+        <div class="navbar">
+          <div class="logo">
+            <a href="#"><h1>Cuppett Psychology</h1></a>
+          </div>
+          <div class="nav-links">
+            <ul class="links">
+              <li><a href="#about-us">About Us</a></li>
+              <li>
+                <a href="#">Services</a>
+                <i class='bx bx-chevron-down arrow dropdown1-arrow'></i>
+                <ul class="dropdown1-sub-menu sub-menu">
+                  <li><a href="#services">Services</a></li>
+                  <li><a href="#process">Process</a></li>
+                  <li><a href="#">Fees & Insurance</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Patient</a>
+                <i class='bx bx-chevron-down arrow dropdown2-arrow'></i>
+                <ul class="dropdown2-sub-menu sub-menu">
+                  <li><a href="#process">New Patient</a></li>
+                  <li><a href="https://portal.therapyappointment.com/index.cfm/public:auth?fw1pk=1" target="_blank">Therapy Appointment Portal</a></li>
+                  <li><a href="#">Sub item 3</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Contact</a>
+                <i class='bx bx-chevron-down arrow dropdown2-arrow'></i>
+                <ul class="dropdown2-sub-menu sub-menu">
+                  <li><a href="#process">Appointment Request Form</a></li>
+                  <li><a href="#">General Inquiry</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="mobile-logo">
-          <h1>Cuppett
-            <br>Psychology</h1>
-        </div>
-        <ul class="menu">
-          <li><a class="menuItem" href="#services">Services</a></li>
-          <li><a class="menuItem" href="#about-us">About</a></li>
-          <li><a class="menuItem" href="#faq">FAQ</a></li>
-          <li><a class="menuItem" href="#contact">Contact</a></li>
-          <li class="dropdown">
-            <button onclick="dropDown()" class="dropbtn">Patient</button>
-            <div id="myDropdown" class="dropdown-content changePosition">
-              <a class="menuItem" href="https://portal.therapyappointment.com/index.cfm/public:auth?fw1pk=1" target="_blank">Therapy Appt.</a>
-              <a href="#process">New Patients</a>
-              <a href="#">Link 3</a>
-            </div>
-          </li>
-          <li></li>
-        </ul>
-        <button class="hamburger">
-          <i class="menuIcon material-icons">menu</i>
-          <i class="closeIcon material-icons">close</i>
-        </button>
       </nav>
     </header>
 
@@ -155,7 +168,7 @@
           <div class="row">
             <div class="box1">
               <h2><span class="process-step-numbers">Step 1:&nbsp</span>Contact Us</h2>
-              <p> The first step is for you to fill out the <a href="#contact">contact form</a> below or call us at 817-375-8890. We will respond with an email or phone call and together we can determine whether or not to move forward with scheduling your initial appointment.</p>
+              <p> The first step is for you to fill out the <a href="#contact">Appointment Request Form</a> below. We will respond with an email or phone call and together we can determine whether or not to move forward with scheduling a consultation appointment.</p>
             </div>
             <div class="box2">
               <h2><span class="process-step-numbers">Step 2:&nbsp</span>Complete Forms</h2>
@@ -220,16 +233,24 @@
     <!-- Contact -->
 
     <section class="contact" id="contact">
+      <h1>Contact Us</h1>
       <div class="row">
-        <h1>Contact Us</h1>
-      </div>
-      <div class="row">
-        <form action="">
-          <input type="text" placeholder="Enter your name">
-          <input type="email" placeholder="Enter your email">
-          <textarea>Enter your message</textarea>
-          <input type="submit" value="send">
-        </form>
+        <div class="contact-left">
+          <h2>Cuppett Psychology</h2>
+          <p>1234 Main St
+            <br>Arington, TX 76001
+            <br>817-123-1234
+            <br>info@cuppettpyschology.com
+          </p>
+        </div>
+        <div class="contact-right">
+          <form action="">
+            <input type="text" placeholder="Enter your name">
+            <input type="email" placeholder="Enter your email">
+            <textarea>Enter your message</textarea>
+            <input type="submit" value="send">
+          </form>
+        </div>
       </div>
     </section>
 
