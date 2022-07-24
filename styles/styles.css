@@ -60,6 +60,14 @@ section {
   padding: 100px 0;
 }
 
+button {
+  font-size: 1.8rem;
+}
+
+.hidden {
+  display: none;
+}
+
 /* Nav Section */
 nav {
   position: fixed;
@@ -258,11 +266,12 @@ input::placeholder {
   color: #CCC;
 }
 
-/* About Section (Services) */
+/* Our Services */
 
 .about {
   background-color: #F5F4EF;
 }
+
 .about h1 {
   text-align: center;
   color: #A0652D;
@@ -281,7 +290,7 @@ input::placeholder {
 .about-right {
   flex-basis: 30%;
   padding: 0 2rem;
-  height: auto;
+  min-height: 350px;
   width: 100%;
   border: 2px solid #354347;
 }
@@ -296,6 +305,22 @@ input::placeholder {
   font-size: 1.8rem;
 }
 
+.toggle-view {
+  color: #A0652D;
+}
+
+.toggle-view:hover {
+  cursor: pointer;
+}
+
+.toggle-view::marker {
+  color: black;
+}
+
+.hidden-items li::marker {
+  color: red;
+  content: "• ";
+}
 .list-link {
   color: #A0652D;
 }
@@ -304,6 +329,7 @@ input::placeholder {
   color: black;
   transition: .5s ease-in-out;
 }
+
 
 .btn {
   background-color: #354347;
@@ -325,7 +351,7 @@ input::placeholder {
 
 
 
-/* About 2 Section (About Us)*/
+/* About Us*/
 
 .about2 {
   background-color: #354347;
