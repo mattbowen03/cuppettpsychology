@@ -60,23 +60,95 @@
     <!-- Appointment Form -->
     <section class="appointment-form-section">
       <div class="form-container">
+        <h2>Appointment Request Form</h2>
+        <div class="spacer-form"></div>
         <form class="appt-req-form" action="">
-          <h2>Appointment Request Form</h2>
-          <label for="first-name">First Name:</label>
-          <input type="text" name="first-name">
-          <label for="last-name">Last Name:</label>
-          <input type="text" name="last-name">
-          <label for="email">Email:</label>
-          <input type="text" name="email">
-          <label for="phone">Phone:</label>
-          <input type="text" name="phone">
-          <label for="age">Age of potential clients:</label>
-          <input type="text" name="age">
 
-          <p>What type of services are you interested in?</p>
-          <input type="checkbox" name="services" value="play-therapy" class="checkbox"><span>Play Therapy</span>
-          <br>
+          <h3>Your Contact Information</h3>
+          <div class="form-row">
+            <label hidden for="first-name"></label>
+            <input type="text" name="first-name" placeholder="First Name*" required>
+            <label hidden for="last-name"></label>
+            <input type="text" name="last-name" placeholder="Last Name*" required>
+          </div>
+          <div class="form-row">
+            <label hidden for="email"></label>
+            <input type="email" name="email" placeholder="Email*" required>
+            <label hidden for="phone"></label>
+            <input type="text" name="phone" placeholder="Phone (xxx-xxx-xxxx)">
+          </div>
 
+          <div class="spacer-form"></div>
+
+          <h3>Patient Information</h3>
+          <div class="form-row-checkbox">
+            <label for="new-patient">New patient?</label>
+            <input type="checkbox" name="new-patient">
+            <label for="returning-patient">Returning patient?</label>
+            <input type="checkbox" name="returning-patient">
+          </div>
+          <label>Contact Information</label>
+          <div class="form-row">
+            <label hidden for="first-name"></label>
+            <input type="text" name="first-name" placeholder="First Name*" required>
+            <label hidden for="last-name"></label>
+            <input type="text" name="last-name" placeholder="Last Name*" required>
+          </div>
+          <div class="form-row">
+            <label hidden for="email"></label>
+            <input type="email" name="email" placeholder="Email*" required>
+            <label hidden for="phone"></label>
+            <input type="text" name="phone" placeholder="Phone (xxx-xxx-xxxx)">
+          </div>
+          <label>Address</label>
+          <div class="form-row">
+            <label hidden for="street"></label>
+            <input type="text" name="street" placeholder="Address Line 1*" required>
+            <label hidden for="street2"></label>
+            <input type="text" name="street2" placeholder="Address Line 2">
+          </div>
+          <div class="form-row">
+            <label hidden for="city"></label>
+            <input type="text" name="city" placeholder="City*" required>
+            <label hidden for="state"></label>
+            <input type="text" name="state" placeholder="State*" required>
+            <label hidden for="zip"></label>
+            <input type="text" name="zip" placeholder="Zip*" required>
+          </div>
+
+          <label for="birthday">Date of Birth:</label> <br>
+          <input type="date" name="birthday"> <br>
+
+          <label>What type of services are you interested in?</label>
+
+          <div class="form-row">
+            <div class="form-row-services">
+              <label for="service1">
+              <input type="checkbox" name="service1">
+              Service 1
+              </label>
+              <label for="service2">Service 2
+                <input type="checkbox" name="service2">
+              </label>
+              <label for="service3">Service 3
+                <input type="checkbox" name="service3">
+              </label>
+            </div>
+
+            <div class="form-row">
+              <div class="form-row-services">
+                <label for="service1">Service 1
+                  <input type="checkbox" name="service1">
+                </label>
+                <label for="service2">Service 2
+                  <input type="checkbox" name="service2">
+                </label>
+                <label for="service3">Service 3
+                  <input type="checkbox" name="service3">
+                </label>
+              </div>
+            </div>
+          </div>
 
           <input type="submit" name="submit" value="Submit">
           
