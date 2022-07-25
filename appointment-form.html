@@ -61,96 +61,127 @@
     <section class="appointment-form-section">
       <div class="form-container">
         <h2>Appointment Request Form</h2>
-        <div class="spacer-form"></div>
-        <form class="appt-req-form" action="">
+        <form class="appt-req-form" action="https://formsubmit.co/mattbowen03@gmail.com" method="POST" >
 
-          <h3>Your Contact Information</h3>
-          <div class="form-row">
-            <label hidden for="first-name"></label>
-            <input type="text" name="first-name" placeholder="First Name*" required>
-            <label hidden for="last-name"></label>
-            <input type="text" name="last-name" placeholder="Last Name*" required>
-          </div>
-          <div class="form-row">
-            <label hidden for="email"></label>
-            <input type="email" name="email" placeholder="Email*" required>
-            <label hidden for="phone"></label>
-            <input type="text" name="phone" placeholder="Phone (xxx-xxx-xxxx)">
-          </div>
-
-          <div class="spacer-form"></div>
-
-          <h3>Patient Information</h3>
-          <div class="form-row-checkbox">
-            <label for="new-patient">New patient?</label>
-            <input type="checkbox" name="new-patient">
-            <label for="returning-patient">Returning patient?</label>
-            <input type="checkbox" name="returning-patient">
-          </div>
-          <label>Contact Information</label>
-          <div class="form-row">
-            <label hidden for="first-name"></label>
-            <input type="text" name="first-name" placeholder="First Name*" required>
-            <label hidden for="last-name"></label>
-            <input type="text" name="last-name" placeholder="Last Name*" required>
-          </div>
-          <div class="form-row">
-            <label hidden for="email"></label>
-            <input type="email" name="email" placeholder="Email*" required>
-            <label hidden for="phone"></label>
-            <input type="text" name="phone" placeholder="Phone (xxx-xxx-xxxx)">
-          </div>
-          <label>Address</label>
-          <div class="form-row">
-            <label hidden for="street"></label>
-            <input type="text" name="street" placeholder="Address Line 1*" required>
-            <label hidden for="street2"></label>
-            <input type="text" name="street2" placeholder="Address Line 2">
-          </div>
-          <div class="form-row">
-            <label hidden for="city"></label>
-            <input type="text" name="city" placeholder="City*" required>
-            <label hidden for="state"></label>
-            <input type="text" name="state" placeholder="State*" required>
-            <label hidden for="zip"></label>
-            <input type="text" name="zip" placeholder="Zip*" required>
-          </div>
-
-          <label for="birthday">Date of Birth:</label> <br>
-          <input type="date" name="birthday"> <br>
-
-          <label>What type of services are you interested in?</label>
-
-          <div class="form-row">
-            <div class="form-row-services">
-              <label for="service1">
-              <input type="checkbox" name="service1">
-              Service 1
-              </label>
-              <label for="service2">Service 2
-                <input type="checkbox" name="service2">
-              </label>
-              <label for="service3">Service 3
-                <input type="checkbox" name="service3">
-              </label>
-            </div>
-
+          <div class="your-contact-info">
+            <h3>Your Contact Information</h3>
             <div class="form-row">
+              <label hidden for="first-name"></label>
+              <input type="text" name="first-name" placeholder="First Name*" required>
+              <label hidden for="last-name"></label>
+              <input type="text" name="last-name" placeholder="Last Name*" required>
+            </div>
+            <div class="form-row">
+              <label hidden for="email"></label>
+              <input type="email" name="email" placeholder="Email*" required>
+              <label hidden for="phone"></label>
+              <input type="text" name="phone" placeholder="Phone (xxx-xxx-xxxx)">
+            </div>
+          </div>
+
+          <div class="your-contact-info">
+            <h3>Patient Information</h3>
+              <label for="new-patient">
+                <input type="checkbox" name="new-patient">
+                New patient?
+              </label>
+              <label for="returning-patient">
+                <input type="checkbox" name="returning-patient">
+                Returning patient?
+              </label>
+            <br>
+            <h4>Contact Information:</h4>
+            <div class="form-row">
+              <label hidden for="patient-first-name"></label>
+              <input type="text" name="patient-first-name" placeholder="First Name*" required>
+              <label hidden for="patient-last-name"></label>
+              <input type="text" name="patient-last-name" placeholder="Last Name*" required>
+            </div>
+            <div class="form-row">
+              <label hidden for="patient-email"></label>
+              <input type="email" name="patient-email" placeholder="Email*" required>
+              <label hidden for="patient-phone"></label>
+              <input type="text" name="patient-phone" placeholder="Phone (xxx-xxx-xxxx)">
+            </div>
+            <h4>Address:</h4>
+            <div class="form-row">
+              <label hidden for="street"></label>
+              <input type="text" name="street" placeholder="Address Line 1*" required>
+              <label hidden for="street2"></label>
+              <input type="text" name="street2" placeholder="Address Line 2">
+            </div>
+            <div class="form-row">
+              <label hidden for="city"></label>
+              <input type="text" name="city" placeholder="City*" required>
+              <label hidden for="state"></label>
+              <input type="text" name="state" placeholder="State*" required>
+              <label hidden for="zip"></label>
+              <input type="text" name="zip" placeholder="Zip*" required>
+            </div>
+  
+            <h4>Date of birth:</h4>
+            <label hidden for="birthday"></label> <br>
+            <input type="date" name="birthday" required> <br>
+  
+            <h4>What type of services are you interested in?</h4>
+            <div class="form-row-checkbox">
               <div class="form-row-services">
-                <label for="service1">Service 1
-                  <input type="checkbox" name="service1">
+                <label for="counseling">
+                  <input type="checkbox" name="counseling">
+                  Counseling
                 </label>
-                <label for="service2">Service 2
-                  <input type="checkbox" name="service2">
+                <label for="evaluation-testing">
+                  <input type="checkbox" name="evaluation-testing">
+                  Evaluation & Testing
                 </label>
-                <label for="service3">Service 3
-                  <input type="checkbox" name="service3">
+                <label for="consultation">
+                  <input type="checkbox" name="consultation">
+                  Consultation
+                </label>
+                <label for="not-sure">
+                  <input type="checkbox" name="not-sure">
+                  Not sure
                 </label>
               </div>
             </div>
+            
+            <h4>Referred by:</h4>
+            <div class="form-row-checkbox">
+              <div class="form-row-services">
+                <label for="psychology-today">
+                  <input type="checkbox" name="psychology-today">
+                Psychology Today
+                </label>
+                <label for="google">
+                  <input type="checkbox" name="google">
+                Google
+                </label>
+                <label for="physician-professional">
+                  <input type="checkbox" name="physician-professional">
+                  Physician/Professional:
+                </label>
+                <label hidden for="physician-professional-text"></label>
+                <input type="text" name="physician-professional-text" id="physician-professional-text" placeholder="Enter name...">
+                <label for="other">
+                  <input type="checkbox" name="other">
+                  Other:
+                </label>
+                <label hidden for="other-text"></label>
+                <input type="text" name="other-text" id="other-text" placeholder="Other...">
+              </div>
+            </div>
+            
+            <h4>Is there anything else you want to request or share?</h4>
+            <div class="form-row">
+              <textarea name="additional-info" id="additional-info" placeholder="Additional info..."></textarea>
+            </div>
+  
+            <p class="disclaimer">Please reserve confidential information for counseling sessions. Use this area for generic questions or requests.</p>
+            <div class="line"></div>
+            <p class="disclaimer">After clicking submit, we will reply to your request within 48hrs. Thank you for your interest, we look forward to serving you.</p>
+  
+            <input type="submit" name="submit" value="Submit">
           </div>
-
-          <input type="submit" name="submit" value="Submit">
           
         </form>
       </div>
