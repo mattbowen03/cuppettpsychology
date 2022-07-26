@@ -88,6 +88,16 @@ button {
   border-bottom: 1px black solid;
   margin: 1rem 0;
 }
+
+.bold {
+  font-weight: 600;
+}
+
+span {
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
 /* Nav Section */
 nav {
   position: fixed;
@@ -113,7 +123,7 @@ nav .navbar .logo a h1{
   color: #354347;
   font-size: 3.2rem;
   font-weight: lighter;
-  letter-spacing: 8px;
+  letter-spacing: -2px;
   text-transform: uppercase;
 }
 
@@ -241,7 +251,7 @@ nav h1 {
   font-size: 1.9rem;
   color: #F1F1F1;
   font-weight: lighter;
-  letter-spacing: 8px;
+  letter-spacing: 0px;
   text-transform: uppercase;
 }
 /* may need later */
@@ -424,6 +434,7 @@ input::placeholder {
 
 /* Process Section */
 
+
 .process a {
   color: #A0652D;
 }
@@ -452,10 +463,12 @@ input::placeholder {
 
 .process .row {
   justify-content: center;
+  width: 90%;
 }
 
 .process-content {
   margin: 50px;
+  
 }
 
 .process-step-numbers {
@@ -503,12 +516,10 @@ input::placeholder {
   width: 33.3%;
 }
 
-.process .box2 {
-  text-align: center;
-}
-
+.process .box1,
+.process .box2,
 .process .box3 {
-  text-align: right;
+  text-align: center;
 }
 
 .process-content h2 {
@@ -553,6 +564,7 @@ input::placeholder {
 
 .faq h1 {
   color: #A0652D;
+  text-align: center;
 }
 
 .faq h2 {
@@ -582,7 +594,7 @@ input::placeholder {
 
 .contact-left h2 {
   font-weight: lighter;
-  letter-spacing: 8px;
+  letter-spacing: 0px;
   text-transform: uppercase;
 }
 
@@ -613,6 +625,20 @@ input::placeholder {
   font-family: "Poppins", sans-serif;
 }
 
+.contact p {
+  margin: 0;
+}
+
+.contact h3 {
+  font-weight: 600;
+}
+
+.google-map {
+  border-radius: 4px;
+  box-shadow: 2px 5px 2px rgba(0, 0, 0, 0.2);
+
+}
+
 
 /* Footer */
 
@@ -631,6 +657,7 @@ footer p {
 
 footer a {
   color: white;
+  font-size: 1.2rem;
 }
 
 footer a:hover {
@@ -718,7 +745,6 @@ form h4 {
   border: 1px solid grey;
   padding: 1rem;
   margin: 1rem;
-  /* box-shadow: 4px 4px 0 black; */
   border-radius: 4px;
 }
 
