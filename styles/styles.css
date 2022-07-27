@@ -318,10 +318,7 @@ input::placeholder {
   margin-bottom: 2.5rem;
 }
 
-.row,
-.about-left,
-.about-middle,
-.about-right {
+#services .row {
   align-items: flex-start;
 }
 
@@ -330,9 +327,12 @@ input::placeholder {
 .about-right {
   flex-basis: 30%;
   padding: 0 2rem;
-  min-height: 350px;
+  min-height: 450px;
+  height:fit-content;
   width: 100%;
   border: 2px solid #354347;
+  position: relative;
+  padding-bottom: 100px;
 }
 
 .about h2 {
@@ -381,6 +381,16 @@ input::placeholder {
   border-radius: 4px;
   cursor: pointer;
   text-transform: uppercase;
+}
+
+#services button {
+  position: absolute;
+  bottom: 0%;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  left: 0;
+  right: 0;
+  text-align: center;
 }
 
 .btn:hover {
@@ -581,6 +591,7 @@ input::placeholder {
 .contact h1 {
   color: #FFF;
   text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .contact .row {
